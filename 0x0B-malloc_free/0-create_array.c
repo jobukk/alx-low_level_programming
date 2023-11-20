@@ -1,5 +1,5 @@
-#include <stdlib>
 #include "main.h"
+#include <stdlib.h>
 /**
 *create_array - function prototype it takes size and char
 *@size: size of the array
