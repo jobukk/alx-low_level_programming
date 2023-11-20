@@ -3,7 +3,7 @@
 #include "main.h"
 /*
 * _strdup - duplicates to new memory space locations
-*@c: char
+*@str: char
 *Return: c
 *
 */
@@ -11,15 +11,15 @@
 char *_strdup(char *str)
 {
 char *c;
-c = malloc(strlen(str) + 1);
 if (str == NULL)
 {
 return (NULL);
 }
+c = malloc(strlen(str) + 1);
 strcpy(c, str);
 if (c == NULL)
 return (NULL);
 return (c);
 
-free(c);
+
 }
