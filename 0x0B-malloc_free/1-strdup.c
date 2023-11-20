@@ -1,4 +1,5 @@
 #include <stdlib.h>
+#include <string.h>
 #include "main.h"
 /*
 * _strdup - duplicates to new memory space locations
