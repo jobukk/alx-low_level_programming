@@ -1,12 +1,12 @@
 #include <stdlib.h>
 #include <string.h>
 #include "main.h"
-/*
-*_strdup - return pointer to a new string
-*@str: char
-*Return: c
-*
-*/
+
+/**
+ * _strdup - duplicates to new memory space locations
+ * @str: char
+ * Return: 0 always
+ */
 
 char *_strdup(char *str)
 {
