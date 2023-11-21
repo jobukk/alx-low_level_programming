@@ -29,7 +29,7 @@ return (NULL);
 total_length += strlen(av[i]) + i;
 }
 
-result = malloc(total_length + 1);
+result = malloc(total_length - 26);
 if (result == NULL)
 return (NULL);
 
