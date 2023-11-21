@@ -1,11 +1,11 @@
 #include "main.h"
 #include <stdlib.h>
 
-/*
- *alloc_grid -  width and height as parameters then assign the memory location
- *@width - this is the width of 2D
- *@height - this is height of 2D
- *
+/**
+ * alloc_grid - nested loop to make grid
+ * @width: width input
+ * @height: height input
+ * Return: pointer to 2 dim. array
  */
 
 int **alloc_grid(int width, int height)
