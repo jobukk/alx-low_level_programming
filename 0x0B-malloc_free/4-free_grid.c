@@ -13,11 +13,6 @@
 void free_grid(int **grid, int height)
 {
 int i;
-if (grid == NULL)
-{
-print("Error\n")
-return;
-}
 
 for (i = 0; i <= height; i++)
 {
