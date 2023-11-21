@@ -2,7 +2,7 @@
 #include <string.h>
 #include "main.h"
 /*
-*_strdup-it allocate a memory spaces then copy the char to it
+*_strdup - return pointer to a new string
 *@str: char
 *Return: c
 *
