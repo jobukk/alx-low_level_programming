@@ -26,7 +26,7 @@ size1 = strlen(s1);
 size2 = strlen(s2);
 total = size1 + size2;
 
-result = malloc(total);
+result = malloc(total + 1);
 if (result == NULL)
 {
 return (NULL);
