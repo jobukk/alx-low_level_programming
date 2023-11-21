@@ -2,9 +2,17 @@
 #include<stdlib.h>
 #include<string.h>
 
+/**
+ * argstostr - main entry
+ * @ac: int input
+ * @av: double pointer array
+ * Return: 0
+ */
+
 char *argstostr(int ac, char **av)
 {
-int size, i, n;
+int i, n;
+char *result;
 size_t total_length = 0;
 
 if (ac <= 0 || av == NULL)
@@ -21,7 +29,7 @@ return (NULL);
 total_length += strlen(av[i]) + i;
 }
 
-char *result = (char *)malloc(total_length + 1);
+result = malloc(total_length + 1);
 if (result == NULL)
 return (NULL);
 
