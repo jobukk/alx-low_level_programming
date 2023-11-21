@@ -2,7 +2,7 @@
 #include <string.h>
 #include "main.h"
 /*
-*_strdup -duplicates to new memory space locations
+*_strdup-it allocate a memory spaces then copy the char to it
 *@str: char
 *Return: c
 *
@@ -16,11 +16,11 @@ if (str == NULL)
 return (NULL);
 }
 c = malloc(strlen(str) + 1);
-strcpy(c, str);
 if (c == NULL)
 {
 return (NULL);
 }
+strcpy(c, str);
 return (c);
 
 
