@@ -1,19 +1,31 @@
+#include "main.h"
 #include <stdlib.h>
-#include "dog.h"
-#include <stdio.h>
+#include <string.h>
 
 /**
- * init_dog - initializes a variable of type struct dog
- * @d: pointer to struct dog to initialize
- * @name: name to initialize
- * @age: age to initialize
- * @owner: owner to initialize
- */
-void init_dog(struct dog *d, char *name, float age, char *owner)
+*string_nconcat - Concatenates two strings using at
+*most an inputted number of bytes.
+*@s1: The first string.
+*@s2: The second string.
+*@n: The maximum number of bytes of s2 to concatenate to s1.
+*
+*Return: If the function fails - NULL.
+*Otherwise - a pointer to the concatenated space in memory.
+*/
+char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	if (d == NULL)
-		d = malloc(sizeof(struct dog));
-	d->name = name;
-	d->age = age;
-	d->owner = owner;
+int length1, length2, total_length;
+length1 = strlen(s1);
+length2 = strlen(s2);
+total_length = length1 + ((n < length2) ? n : length2);
+
+char *sentence = (char *)malloc((total_length + 1) * sizeof(char));
+if (sentence == NULL)
+{
+	return (NULL);
+}
+strcpy(sentence, s1);
+strncat(sentence, s2, (n < length2) ? n : length2);
+return (sentence);
+
 }
