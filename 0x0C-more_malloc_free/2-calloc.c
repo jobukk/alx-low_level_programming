@@ -1,17 +1,26 @@
 #include "main.h"
 
+char *_memset(char *s, char b, unsigned int n)
+{
+unsigned int i;
+for (i = 0; i < n; i++)
+{
+s[i] = b;
+}
+return (s);
+}
 
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
+char *ptr;	
 if (nmemb == 0 || size == 0)
 	return (NULL);
-size_t total_size = nmemb * size;
-void *ptr = malloc(total_size);
+ptr = malloc(size * nmemb);
 
 if (ptr == NULL)
 	return (NULL);
 
-memset(ptr, 0, total_size);
+_memset(ptr, 0, size * nmemb);
 
 return (ptr);
 }
