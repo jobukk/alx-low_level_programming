@@ -1,39 +1,39 @@
 #include "main.h"
-#include <stdio.h>
 #include <stdlib.h>
 
 /**
-* _realloc - creates an array of integers
-* @ptr: type char pointer of memory previously allocated
-* @old_size: type unsigned int size in bytes
-* @new_size: type unsigned int size in bytes
-* Return: p or NULL
-*/
+ * _realloc - Main Entry
+ * @ptr: input
+ * @old_size: input
+ * @new_size: input
+ * Return: 0
+ */
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 {
-unsigned int x;
-char *p, *ns;
+	char *p;
+	unsigned int i, max = new_size;
+	char *oldp = ptr;
 
-if (new_size == old_size)
-return (ptr);
-if (ptr != NULL && new_size == 0)
-{
-free(ptr);
-return (NULL);
-}
-if (ptr == NULL)
-{
-p = malloc(new_size);
-if (p == NULL)
-return (NULL);
-return (p);
-}
-p = malloc(new_size);
-if (p == NULL)
-return (NULL);
-ns = ptr;
-for (x = 0; x < old_size; x++)
-*(p + x) = *(ns + x);
-free(ptr);
-return (p);
+	if (ptr == NULL)
+	{
+		p = malloc(new_size);
+		return (p);
+	}
+	else if (new_size == 0)
+	{
+		free(ptr);
+		return (NULL);
+	}
+	else if (new_size == old_size)
+		return (ptr);
+
+	p = malloc(new_size);
+	if (p == NULL)
+		return (NULL);
+	if (new_size > old_size)
+		max = old_size;
+	for (i = 0; i < max; i++)
+		p[i] = oldp[i];
+	free(ptr);
+	return (p);
 }
