@@ -5,7 +5,7 @@
  * print_dlistint - print elements in dlinkedlist
  * @h: head
  *
- * Return : node_count
+ * Return: node_count
  */
 size_t print_dlistint(const dlistint_t *h)
 {
@@ -18,5 +18,5 @@ size_t print_dlistint(const dlistint_t *h)
         node_count++;
     }
 
-    return node_count;
+    return (node_count);
 }
