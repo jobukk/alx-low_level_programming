@@ -5,6 +5,7 @@ island_perimeter
 
 
 def island_perimeter(grid):
+    """Function to check perimeter"""
     edges = 0
     size = 0
     height = len(grid)
