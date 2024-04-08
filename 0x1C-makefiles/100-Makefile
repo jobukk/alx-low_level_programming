@@ -1,5 +1,5 @@
-cc = gcc
-SRC = main.c school.cc
+CC = gcc
+SRC = main.c school.c
 OBJ = ${SRC:%.c=%.o}
 Name = school
 CFLAGS = -Wall -Werror -Wextra -pedantic
@@ -7,7 +7,7 @@ CFLAGS = -Wall -Werror -Wextra -pedantic
 .PHONY: all clean oclean fclean re
 
 all: m.h ${OBJ}
-		${cc} ${OBJ} -o ${NAME}
+		${CC} ${OBJ} -o ${NAME}
 
 clean: 
 		${RM} *~ ${NAME}
